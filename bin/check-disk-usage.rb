@@ -212,6 +212,7 @@ class CheckDisk < Sensu::Plugin::Check::CLI
     fs_mounts
     critical usage_summary unless @crit_fs.empty?
     warning usage_summary unless @warn_fs.empty?
-    ok "All disk usage under #{config[:bwarn]}% and inode usage under #{config[:iwarn]}%"
+    # ok "All disk usage under #{config[:bwarn]}% and inode usage under #{config[:iwarn]}%"
+    ok "All disk usage under #{config[:bwarn]}%"
   end
 end
